@@ -10,7 +10,13 @@ public class Doctor {
     //Método Constructor
     Doctor(){
         System.out.println("Construyendo el objeto Doctor");
+    }
+
+    //Sobrecarga de método constructor
+    Doctor(String name, String speciality){
         id++;
+        this.name = name;
+        this.speciality = speciality;
     }
 
     //Método
