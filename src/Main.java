@@ -23,5 +23,11 @@ public class Main {
         System.out.println(myDoctor.speciality);
 
         Patient patient = new Patient("Ale","ale@mail.com");
+        patient.setWeight(62);
+        System.out.println(patient.getWeight());
+
+        //No va a asignar el #telefónico, por la regla de negocio en la clase Patient
+        patient.setPhoneNumber("1245479839");
+        System.out.println(patient.getPhoneNumber()); //null
     }
 }
