@@ -1,13 +1,15 @@
 public class Patient {
     //Propiedades
-    String name;
-    String email;
-    String address;
-    String phoneNumber;
-    String birthday;
-    Double weight;
-    Double height;
-    String blood;
+    int id;
+    //Encapsular con la palabra reservada "private"
+    private String name;
+    private String email;
+    private String address;
+    private String phoneNumber;
+    private String birthday;
+    private double weight;
+    private double height;
+    private String blood;
 
     //Constructor
     Patient(String name, String email){
