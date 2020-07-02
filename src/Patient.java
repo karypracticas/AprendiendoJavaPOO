@@ -1,11 +1,6 @@
-public class Patient {
-    //Propiedades
-    int id;
+public class Patient extends User {
     //Encapsular con la palabra reservada "private"
-    private String name;
-    private String email;
-    private String address;
-    private String phoneNumber;
+    //Atributos especiales
     private String birthday;
     private double weight;
     private double height;
@@ -13,8 +8,8 @@ public class Patient {
 
     //Constructor
     Patient(String name, String email){
-        this.name = name;
-        this.email = email;
+        //Hace referencia al método constructos de la Súper Clase, en este caso User
+        super(name, email);
     }
 
     //En el método Set y get, se están agregando las reglas de negocio es decir la validaciones
@@ -34,53 +29,8 @@ public class Patient {
     public String getHeight() {
         return height + " Mts.";
     }
-
     public void setHeight(double height) {
         this.height = height;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        if (phoneNumber.length() > 8) {
-            System.out.println("El número telefónico debe ser máximo 8 dígitos");
-        }else if (phoneNumber.length() == 8) {
-            this.phoneNumber = phoneNumber;
-        }
     }
 
     public String getBirthday() {
