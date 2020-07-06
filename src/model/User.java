@@ -1,3 +1,5 @@
+package model;
+
 //Súper Clase
 public class User {
     private int id;
@@ -59,6 +61,6 @@ public class User {
     @Override
     //Método extraído de la clase Padre es decir de la clase Object en este caso
     public String toString() {
-        return "User: " + name + ",Email: " + email + "\nAdress: " + address + ". Phone: " + phoneNumber;
+        return "model.User: " + name + ",Email: " + email + "\nAdress: " + address + ". Phone: " + phoneNumber;
     }
 }

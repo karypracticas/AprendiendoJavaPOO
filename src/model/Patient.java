@@ -1,3 +1,5 @@
+package model;
+
 public class Patient extends User {
     //Encapsular con la palabra reservada "private"
     //Atributos especiales
@@ -7,8 +9,8 @@ public class Patient extends User {
     private String blood;
 
     //Constructor
-    Patient(String name, String email){
-        //Hace referencia al método constructos de la Súper Clase, en este caso User
+    public Patient(String name, String email){
+        //Hace referencia al método constructos de la Súper Clase, en este caso model.User
         super(name, email);
     }
 
@@ -50,7 +52,7 @@ public class Patient extends User {
     }
 
    @Override
-   //Sobrescribe el método toString de la clase User que previamente ya estaba sobrescrito de la clase Object
+   //Sobrescribe el método toString de la clase model.User que previamente ya estaba sobrescrito de la clase Object
     public String toString() {
       return  super.toString() + "\nAge: " + birthday + "\nWeight: " + getWeight() +  "\nHeight: " + getHeight() + "\nBlood: " + blood;
     }

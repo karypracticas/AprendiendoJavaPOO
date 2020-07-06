@@ -1,4 +1,5 @@
-import javax.print.Doc;
+package model;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -17,9 +18,9 @@ public class Doctor extends User {
     }
 
     //Sobrecarga de método constructor
-    Doctor(String name, String email){
+    public Doctor(String name, String email){
         super(name, email);
-        System.out.println("El nombre del Doctor asignado es: " + name);
+        System.out.println("El nombre del model.Doctor asignado es: " + name);
         this.speciality = speciality;
     }
 
@@ -35,7 +36,7 @@ public class Doctor extends User {
     }
 
     @Override
-    /*Sobrescribir el método toString a nivel de clase Doctor, trayendo el comportamiento de la clase User con la palabra super, también hacemos uso de la clase anidada
+    /*Sobrescribir el método toString a nivel de clase model.Doctor, trayendo el comportamiento de la clase model.User con la palabra super, también hacemos uso de la clase anidada
     con el fin de no repetir código y aplicar polimorfismo.
     * */
     public String toString() {
