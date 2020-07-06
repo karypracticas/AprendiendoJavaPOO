@@ -48,4 +48,11 @@ public class Patient extends User {
     public void setBlood(String blood) {
         this.blood = blood;
     }
+
+   @Override
+   //Sobrescribe el método toString de la clase User que previamente ya estaba sobrescrito de la clase Object
+    public String toString() {
+      return  super.toString() + "\nAge: " + birthday + "\nWeight: " + getWeight() +  "\nHeight: " + getHeight() + "\nBlood: " + blood;
+    }
+
 }

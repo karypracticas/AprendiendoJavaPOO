@@ -34,10 +34,16 @@ public class Doctor extends User {
         return availableAppointments;
     }
 
-
+    @Override
+    /*Sobrescribir el método toString a nivel de clase Doctor, trayendo el comportamiento de la clase User con la palabra super, también hacemos uso de la clase anidada
+    con el fin de no repetir código y aplicar polimorfismo.
+    * */
+    public String toString() {
+        return  super.toString() + "\nSpeciality: " + speciality + "\nAvailable: " + availableAppointments.toString();
+    }
 
     //Clase anidada
-    public static class  AvailableAppointment{
+    public static class  AvailableAppointment {
         private int id;
         private Date date;
         private String time;
@@ -71,6 +77,16 @@ public class Doctor extends User {
         public void setTime(String time) {
             this.time = time;
         }
+
+        @Override
+        //Sobrescribir el método toString a nivel de clase anidada
+        public String toString() {
+            return "Available apointments \nDate " + date + "\nTime: " + time ;
+        }
     }
+
+
+
+
 
 }
