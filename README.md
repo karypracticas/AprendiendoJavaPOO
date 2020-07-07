@@ -1,6 +1,6 @@
 # AprendiendoJavaPOO
 
-ava -version 
+Java -version 
 
 Java tiene una herramienta interactiva en dónde puedes ir probando segmentos de código en vez de realizar todo el proceso de creación de un programa en Java. Escribir, compilar y correr.
 Su nombre es jshell y está disponible desde la versión 9 de Java.
