@@ -111,3 +111,30 @@ Collections:
 Otras interfaces que son muy importantes en Java son los llamados Collections
 Los Collections nos van a servir para trabajar con colecciones de datos, específicamente y solamente con objetos, para esto recuerda que tenemos disponibles nuestras clases Wrapper que nos ayudan a convertir datos primitivos a objetos.
 Los collections se diferencian de los arrays en que su tamaño no es fijo y por el contrario es dinámico.
+
+Las interfaces pueden heredar de otras interfaces utilizando la palabra clave extends, el concepto de herencia se aplicará como naturalmente se practica en clases, es decir, la interfaz heredará y adquirirá los métodos de la interfaz padre.
+
+Una cosa interesante que sucede en caso de herencia con interfaces es que, aquí sí es permitido la herencia múltiple como ves a continuación:
+
+public interface IReadable {
+	public void read();
+}
+
+
+public interface Visualizable extends IReadable, Serializable {
+	public void setViewed();
+	public Boolean isViewed();
+	public String timeViewed();
+}
+Además siguiendo las implementaciones de métodos default y private de las versiones Java 8 y 9 respectivamente podemos sobreescribir métodos y añadirles comportamiento, si es el caso.
+
+public interface Visualizable extends IReadable, Serializable {
+	public void setViewed();
+	public Boolean isViewed();
+	public String timeViewed();
+	
+@Override
+	default void read() {
+	// TODO Auto-generated method stub
+}
+}
