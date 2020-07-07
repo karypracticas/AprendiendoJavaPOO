@@ -1,5 +1,6 @@
 import model.Doctor;
 import model.Patient;
+import model.User;
 
 import java.util.Date;
 
@@ -23,6 +24,13 @@ public class Main {
         myDoctor.addAvailableAppointment(new Date(), "4pm");
         myDoctor.addAvailableAppointment(new Date(), "10am");
         myDoctor.addAvailableAppointment(new Date(), "1pm");
+
+        //Usando el método abstracto
+        User user = new Doctor("Karys Rguez", "mymail@gmail.com");
+        user.showDataUser();
+
+        User userPatient = new Patient("Pedro perez", "paciente@gmail.com");
+        userPatient.showDataUser();
 
         System.out.println(myDoctor);
 
