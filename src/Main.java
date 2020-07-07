@@ -1,6 +1,4 @@
-import model.Doctor;
-import model.Patient;
-import model.User;
+import model.*;
 
 import java.util.Date;
 
@@ -25,12 +23,34 @@ public class Main {
         myDoctor.addAvailableAppointment(new Date(), "10am");
         myDoctor.addAvailableAppointment(new Date(), "1pm");
 
-        //Usando el método abstracto
+        //Usando el método abstracto para Doctor
         User user = new Doctor("Karys Rguez", "mymail@gmail.com");
         user.showDataUser();
 
+        //Usando el método abstracto para Paciente
         User userPatient = new Patient("Pedro perez", "paciente@gmail.com");
         userPatient.showDataUser();
+
+        //Usando el método abstracto en un User y es una clase anonima
+        //Solo será vigente para el lapso de tiempo en el que se está llamando el objeto user
+        User user0 = new User("Carlos Fuentes","user@gmail.com") {
+            @Override
+            public void showDataUser() {
+                System.out.println("Doctor\n");
+                System.out.println("Hospital: Cruz Verde");
+                System.out.println("Departamento de Geriatría");
+            }
+        };
+        user0.showDataUser();
+
+        ISchedulable iSchedulable = new ISchedulable() {
+            @Override
+            public void schedule(Date date, String time) {
+
+            }
+        };
+
+        //ISchedulable iSchedulable1 = new AppointmentDoctor();
 
         System.out.println(myDoctor);
 
