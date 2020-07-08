@@ -20,8 +20,6 @@ public class Doctor extends User {
     //Sobrecarga de método constructor
     public Doctor(String name, String email){
         super(name, email);
-        System.out.println("El nombre del model.Doctor asignado es: " + name);
-        this.speciality = speciality;
     }
 
     //Colección de objetos
